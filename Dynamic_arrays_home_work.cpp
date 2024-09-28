@@ -18,10 +18,16 @@ int main()
 	{
 		for (int j = 0; j < width; j++) 
 		{
-		array[i][j] = 10;
+		array[i][j] = 10;//заполнение массивов
 		cout << array[i][j] << "  ";
 		}
 	cout << "\n\n";
-}
+	}
+
+	for (int i = 0; i < height; i++)
+	{
+		delete[] array[i]; // очистка памяти от массивов
+	}
+	delete[] array; // очистка памяти от массива указателей
 }
 
